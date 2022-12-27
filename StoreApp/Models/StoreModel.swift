@@ -9,8 +9,8 @@ import Foundation
 
 @MainActor
 class StoreModel: ObservableObject {
-    @Published private(set) var categories: [Category] = []
-    @Published private(set) var products: [Product] = []
+    @Published var categories: [Category] = []
+    @Published var products: [Product] = []
     
     let client = StoreHTTPClient()
     
