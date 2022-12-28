@@ -12,7 +12,7 @@ struct StoreAppApp: App {
     @StateObject private var storeModel = StoreModel()
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(storeModel)
+            CategoryListScreen().environmentObject(storeModel)
         }
     }
 }
