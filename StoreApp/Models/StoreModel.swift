@@ -17,12 +17,10 @@ class StoreModel: ObservableObject {
     func fetchCategories() async throws {
         
         categories = try await client.load(Resource(url: URL.allCategories))
-//        categories = try await client.getCategories(url: URL.allCategories)
     }
     
     func getProductsByCategory(_ categoryId: Int) async throws {
         products = try await client.load(Resource(url: .productsByCategory(categoryId)))
-//        products = try await client.getProductsByCategory(url: .productsByCategory(categoryId))
     }
     
     func saveProduct(_ createProductRequest: CreateProductRequest) async throws {

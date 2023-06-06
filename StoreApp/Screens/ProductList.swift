@@ -13,7 +13,9 @@ struct ProductList: View {
     let category: Category
     var body: some View {
         List(storeModel.products, id: \.id) { product in
-            ProductCellView(product: product)
+            NavigationLink(destination: ProductDetailScreen(product: product)) {
+                ProductCellView(product: product)
+            }
         }
         .listStyle(.plain)
         .navigationTitle(category.name)
